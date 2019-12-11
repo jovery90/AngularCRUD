@@ -1,3 +1,6 @@
+<h1>CRUD on Angular</h1>
+<p>Create a list item</p>
+
 <div>
 
   <input (click)="eraseInputPostArray()" (keyup)="getInput($event)" type="text">
@@ -5,18 +8,21 @@
   <button (click)="clearPosts()">Clear</button>
 
 </div>
-
-
+<br>
+<hr>
+<p>Editable items for list display changes: ({{posts.length}})</p>
 <div *ngFor="let post of posts">
-  <br><br><br>
+  <br>
   <input (click)="eraseInputPostArray()"  (keyup)="getInput($event)" type="text" value="{{ this.post }}">
   <button (click)="editPost(this.post)">Save Edit</button>
   <button (click)="deletePost(this.post)" >Delete</button>
 
 </div>
 
-<br><br>
+<br>
+<hr>
 
+<h1>Current List Display:</h1>
 <div *ngFor="let post of posts">
     <p>{{this.post}}</p>
 
