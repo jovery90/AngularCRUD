@@ -1,0 +1,23 @@
+<div>
+
+  <input (click)="eraseInputPostArray()" (keyup)="getInput($event)" type="text">
+  <button (click)="createPost()" type="text">Save</button>
+  <button (click)="clearPosts()">Clear</button>
+
+</div>
+
+
+<div *ngFor="let post of posts">
+  <br><br><br>
+  <input (click)="eraseInputPostArray()"  (keyup)="getInput($event)" type="text" value="{{ this.post }}">
+  <button (click)="editPost(this.post)">Save Edit</button>
+  <button (click)="deletePost(this.post)" >Delete</button>
+
+</div>
+
+<br><br>
+
+<div *ngFor="let post of posts">
+    <p>{{this.post}}</p>
+
+  </div>
